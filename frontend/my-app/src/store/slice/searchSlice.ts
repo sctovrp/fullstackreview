@@ -14,6 +14,7 @@ export const querySlice = createSlice({
     reducers: {
         setFind: (state, value: PayloadAction<string>) =>{
             const newValue = value.payload;
+            
             state.find = newValue;
         },
     }

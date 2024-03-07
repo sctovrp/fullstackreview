@@ -7,19 +7,21 @@ import { useAppSelector } from "../../../store/hooks";
 import { FindCard } from "../../cards/findCard";
 
 export default function FindUserList () {
-    const find = useAppSelector(state => state.query.find);
+    const find:string  = useAppSelector(state => state.query.find);
+
     const [user, setUser] = useState(null);
+
 
     const {data: post, error, isLoading } = useQuery(['username', find], async () => findUserQuery(find),{
         keepPreviousData: true,
         onSuccess(data) {
             if (data){
-                // console.log(data)
                 setUser(data);
             } else {
                 setUser(null);
             }
         },
+        enabled: find.length !== 0
     })
     
     useEffect(() => {

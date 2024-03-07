@@ -9,7 +9,7 @@ Skill test to reinforce knowledge about fullstack development. Improving previou
 - [X] Add redux.
 - [X] Use React query, cache the fecthing data.
 - [X] Create a card and pass the props correctly.
-- [ ] Create repo.
+- [X] Create repo.
 - [ ] Style cards.
 - [ ] Style findUser components.
 - [ ] Add same structure to searchUsers.
@@ -17,6 +17,9 @@ Skill test to reinforce knowledge about fullstack development. Improving previou
 - [ ] Create barchart.
 - [ ] Handle errors, constraints, etc.
 
+### Error list
+
+- don't call the github api if its null the input (review the use of useEffect? )
 
 ## Backend
 
