@@ -5,6 +5,7 @@ import { findUserQuery } from "../../../helper";
 import { setFind } from "../../../store/slice/searchSlice";
 import { useAppSelector } from "../../../store/hooks";
 import { FindCard } from "../../cards/findCard";
+import { NoFindCard } from "../../cards/noFindCard";
 
 export default function FindUserList () {
     const find:string  = useAppSelector(state => state.query.find);
@@ -21,7 +22,10 @@ export default function FindUserList () {
                 setUser(null);
             }
         },
-        enabled: find.length !== 0
+        enabled: find.length !== 0,
+        onError(data) {
+            setUser(null);
+        }
     })
     
     useEffect(() => {
@@ -35,7 +39,9 @@ export default function FindUserList () {
             {user ? (
                 <FindCard user={user} />
             ): (
-                <h4>not info retrieved</h4> 
+                <div>
+                    <NoFindCard find={find} />
+                </div>
             )}
             
         </div>

@@ -10,7 +10,9 @@ Skill test to reinforce knowledge about fullstack development. Improving previou
 - [X] Use React query, cache the fecthing data.
 - [X] Create a card and pass the props correctly.
 - [X] Create repo.
-- [ ] Style cards.
+- [X] Create card NoFindUser.
+- [X] Style card NoFindUser.
+- [ ] Style cards FindUser.
 - [ ] Style findUser components.
 - [ ] Add same structure to searchUsers.
 - [ ] Overall style this project.

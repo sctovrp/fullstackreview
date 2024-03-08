@@ -54,12 +54,6 @@ export const FindCard = (props: any) => {
     )
 }
 
-// asddfasdfasd
-// asdfasdf
-// asdf
-// asdfasdfasd
-
-
 
 /*
 avatar_url
